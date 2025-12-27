@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pro Group Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #0a0a0a, #000);
+      color: #fff;
+      min-height: 100vh;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .login, .panel {
+      max-width: 420px;
+      margin: auto;
+      background: rgba(255,255,255,0.06);
+      padding: 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    h1, h2 {
+      text-align: center;
+      letter-spacing: 0.15em;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    input, textarea {
+      background: #111;
+      color: #fff;
+    }
+
+    button {
+      background: #4facfe;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div class="login" id="loginBox">
+    <h1>ADMIN LOGIN</h1>
+    <input type="password" id="password" placeholder="Admin Password">
+    <button onclick="login()">Sign In</button>
+    <p class="note">Admin only</p>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <div class="panel hidden" id="adminPanel">
+    <h2>Add Software</h2>
+
+    <input id="name" placeholder="Software Name">
+    <textarea id="desc" placeholder="Description"></textarea>
+    <input id="price" placeholder="Price (₹)">
+    <input id="paylink" placeholder="Payment Link (Razorpay / Stripe / PayPal)">
+    <input id="download" placeholder="Download Link (Google Drive, etc.)">
+
+    <button onclick="addSoftware()">Publish Software</button>
+
+    <p class="note">
+      Payment link must be a REAL payment link.<br>
+      Example: Razorpay Payment Link
+    </p>
+  </div>
+
+  <script>
+    const ADMIN_PASSWORD = "aditya2014242022";
+
+    function login() {
+      const pass = document.getElementById("password").value;
+      if (pass === ADMIN_PASSWORD) {
+        document.getElementById("loginBox").classList.add("hidden");
+        document.getElementById("adminPanel").classList.remove("hidden");
+      } else {
+        alert("Wrong password");
+      }
+    }
+
+    function addSoftware() {
+      const software = {
+        name: name.value,
+        desc: desc.value,
+        price: price.value,
+        paylink: paylink.value,
+        download: download.value
+      };
+
+      if (!software.name || !software.price || !software.paylink) {
+        alert("Fill all required fields");
+        return;
+      }
+
+      const list = JSON.parse(localStorage.getItem("realSoftwares")) || [];
+      list.push(software);
+      localStorage.setItem("realSoftwares", JSON.stringify(list));
+
+      alert("Software published successfully");
+
+      name.value = "";
+      desc.value = "";
+      price.value = "";
+      paylink.value = "";
+      download.value = "";
+    }
+  </script>
+
+</body>
+</html>
