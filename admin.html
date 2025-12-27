@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign In – Pro Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Main site styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at top, #0a0a0a, #000);
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 32px;
+      border-radius: 22px;
+      width: 100%;
+      max-width: 360px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .login-box h2 {
+      margin-bottom: 22px;
+      letter-spacing: 0.15em;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: #4facfe;
+      color: #000;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      opacity: 0.9;
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>SIGN IN</h2>
+
+    <input id="email" type="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Password" />
+
+    <button onclick="signIn()">Sign In</button>
+
+    <div class="note">
+      Admin & users sign in here
+    </div>
+  </div>
+
+  <script>
+    function signIn() {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!email || !password) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      // 👑 ADMIN CREDENTIALS
+      const ADMIN_EMAIL = "admin@progroup.com";
+      const ADMIN_PASSWORD = "aditya2014242022";
+
+      if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+        // Admin login
+        localStorage.setItem("role", "admin");
+        window.location.href = "dashboard.html";
+      } else {
+        // Normal user login
+        localStorage.setItem("role", "user");
+        window.location.href = "store.html";
+      }
+    }
+  </script>
+
+</body>
+</html>
