@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard – Pro Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      overflow-y: auto;
+      padding: 30px 20px;
+      background: radial-gradient(circle at top, #0a0a0a, #000);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      letter-spacing: 0.2em;
+    }
+
+    .header p {
+      opacity: 0.6;
+      margin-top: 10px;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 20px;
+      padding: 25px;
+      backdrop-filter: blur(10px);
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      padding: 12px 26px;
+      border: none;
+      border-radius: 25px;
+      background: #4facfe;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button.logout {
+      background: #ff5c5c;
+      color: #000;
+      float: right;
+    }
+
+    .software-list {
+      margin-top: 20px;
+    }
+
+    .software-item {
+      padding: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .software-item:last-child {
+      border-bottom: none;
+    }
+
+    .price {
+      color: #4facfe;
+      font-weight: bold;
+    }
+
+    .earnings {
+      font-size: 1.4rem;
+      color: #4facfe;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <button class="logout" onclick="logout()">Logout</button>
+    <h1>ADMIN DASHBOARD</h1>
+    <p>Pro Group – Control Panel</p>
+  </div>
+
+  <!-- Earnings -->
+  <div class="section">
+    <h2>Total Earnings</h2>
+    <div class="earnings">
+      ₹<span id="totalEarnings">0</span>
+    </div>
+  </div>
+
+  <!-- Add Software -->
+  <div class="section">
+    <h2>Add New Software</h2>
+
+    <input id="softName" placeholder="Software Name" />
+    <textarea id="softDesc" placeholder="Software Description"></textarea>
+    <input id="softPrice" type="number" placeholder="Price (₹)" />
+
+    <button onclick="addSoftware()">Publish Software</button>
+  </div>
+
+  <!-- Software List -->
+  <div class="section">
+    <h2>Published Software</h2>
+    <div id="softwareList" class="software-list"></div>
+  </div>
+
+  <script>
+    // 🔒 Protect admin page
+    if (localStorage.getItem("role") !== "admin") {
+      window.location.href = "admin.html";
+    }
+
+    // Load data
+    let softwares = JSON.parse(localStorage.getItem("softwares")) || [];
+    let earnings = parseInt(localStorage.getItem("earnings")) || 0;
+
+    document.getElementById("totalEarnings").innerText = earnings;
+
+    function addSoftware() {
+      const name = document.getElementById("softName").value.trim();
+      const desc = document.getElementById("softDesc").value.trim();
+      const price = document.getElementById("softPrice").value.trim();
+
+      if (!name || !desc || !price) {
+        alert("Fill all fields");
+        return;
+      }
+
+      const software = {
+        id: Date.now(),
+        name,
+        desc,
+        price
+      };
+
+      softwares.push(software);
+      localStorage.setItem("softwares", JSON.stringify(softwares));
+
+      document.getElementById("softName").value = "";
+      document.getElementById("softDesc").value = "";
+      document.getElementById("softPrice").value = "";
+
+      renderSoftware();
+    }
+
+    function renderSoftware() {
+      const list = document.getElementById("softwareList");
+      list.innerHTML = "";
+
+      softwares.forEach(s => {
+        const div = document.createElement("div");
+        div.className = "software-item";
+        div.innerHTML = `
+          <strong>${s.name}</strong><br>
+          ${s.desc}<br>
+          <span class="price">₹${s.price}</span>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    function logout() {
+      localStorage.removeItem("role");
+      window.location.href = "admin.html";
+    }
+
+    renderSoftware();
+  </script>
+
+</body>
+</html>
