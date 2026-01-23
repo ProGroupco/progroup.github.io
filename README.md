@@ -273,3 +273,57 @@ Install my-project with npm
 
 What did you learn while building this project? What challenges did you face and how did you overcome them?
 
+# 🚀 OReboot OS
+**The Next-Generation Operating System with a Modern Soul.**
+
+OReboot is a custom-built operating system designed to bridge the gap between retro low-level assembly and modern cloud-integrated functionality. It features a Windows 10/11 inspired aesthetic, a proprietary application runtime, and built-in AI.
+
+---
+
+## ✨ Key Features
+
+### 🏢 Pro I Store
+The official marketplace for OReboot. Unlike traditional stores, the Pro I Store allows for decentralized file sharing.
+* **Upload/Download:** Users can contribute `.oaf` files and media directly.
+* **Format:** Native support for the **.oaf** (OReboot Application File) standard.
+
+### 🧠 BRO GANG Light (AI)
+OReboot comes with a built-in AI assistant, **BRO GANG Light**, integrated directly into the system kernel to assist with navigation and task automation.
+
+### ☁️ Pro Cloud & Networking
+* **Pro Cloud:** A native cloud storage system for syncing user data.
+* **Connectivity:** Designed for real-time internet access and online synchronization.
+
+### 📂 Pro FE (File Executor)
+The advanced file manager of OReboot. Pro FE handles system navigation and executes native `.oaf` binaries with high efficiency.
+
+---
+
+## 🛠 Tech Stack
+* **Language:** x86 Assembly (16-bit/32-bit)
+* **Architecture:** Custom Bootloader / Kernel
+* **Graphics:** VGA Mode 13h / VESA BIOS Extensions (VBE)
+* **Emulator:** QEMU
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+You will need `nasm` and `qemu` installed (Termux, Linux, or MacOS).
+
+### Installation & Build
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/OReboot.git](https://github.com/YOUR_USERNAME/OReboot.git)
+   cd OReboot
+   
+---
+
+### 💡 Pro Tips for your GitHub:
+
+* **Add Images:** Take a screenshot of that blue screen from your VNC viewer and upload it to GitHub. Then, put it in the "Screenshots" section.
+* **The LICENSE file:** You should also create a file named `LICENSE` and paste the "MIT License" text inside it to make it official.
+* **Releases:** Once the login screen is working perfectly, use the "Releases" feature on GitHub to upload your `boot.bin`.
+
+**Would you like me to help you write the code for the "Pro FE" (File Executor) so it can actually look for .oaf files on your virtual disk?**
