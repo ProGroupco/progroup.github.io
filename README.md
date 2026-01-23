@@ -327,3 +327,31 @@ You will need `nasm` and `qemu` installed (Termux, Linux, or MacOS).
 * **Releases:** Once the login screen is working perfectly, use the "Releases" feature on GitHub to upload your `boot.bin`.
 
 **Would you like me to help you write the code for the "Pro FE" (File Executor) so it can actually look for .oaf files on your virtual disk?**
+# 🪐 OReboot OS (Project: ORI)
+![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen)
+![Platform](https://img.shields.io/badge/Platform-OReboot_x86-blue)
+
+> **"The Sky is not the limit; it's the beginning."** > OReboot is a cloud-integrated OS ecosystem featuring a proprietary runtime, built-in AI, and a decentralized marketplace.
+
+---
+
+## 🛠️ Built With (Technology Stack)
+
+| Category | Languages & Tools |
+| :--- | :--- |
+| **System Kernel** | ![Assembly](https://img.shields.io/badge/Assembly-x86-00599C?logo=assemblyscript&logoColor=white) ![Bytecode](https://img.shields.io/badge/Binary-Bytecode-000000?logo=webassembly&logoColor=white) ![Shell](https://img.shields.io/badge/Shell-Script-4EAA25?logo=gnu-bash&logoColor=white) |
+| **Backend & AI** | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![MS Python](https://img.shields.io/badge/Microsoft-Python-0078D4?logo=microsoft&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white) |
+| **Pro I Store / Web** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) |
+
+---
+
+## 💎 Core Ecosystem Features
+
+### 🛒 Pro I Store
+The **Pro I Store** is our decentralized marketplace. It allows users to upload and download:
+- **.oaf** (OReboot Application Files)
+- Media assets and UI themes.
+- System patches.
+
+### 🧠 BRO GANG Light (System AI)
+Built using a hybrid of **Python** and **Byte
