@@ -530,3 +530,12 @@ Pro Group , it is my company, also I am working at <br>A website, OReboot, it is
 <p align="center">
   <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" />
 </p>
+---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&center=true&vCenter=true&width=650&lines=Built+with+curiosity+%F0%9F%A7%A0;Powered+by+learning+%F0%9F%94%A5;Hi%2C+I+am+Pro+Group.co" />
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer"/>
+</p>
