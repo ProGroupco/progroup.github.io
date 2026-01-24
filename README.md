@@ -578,3 +578,9 @@ Pro Group , it is my company, also I am working at <br>A website, OReboot, it is
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer"/>
 </p>
+### 🕹 Minecraft Projects
+
+Languages / tools used:
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,bedrock,js,html,css" />
+</p>
