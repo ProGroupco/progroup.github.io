@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Access — Pro Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="admin-container">
+    <section class="admin-card">
+      <p class="eyebrow">Admin access</p>
+      <h1>Sign in to the control room</h1>
+      <p class="muted">
+        Enter your admin credentials to continue. This page validates the
+        username and password you provided.
+      </p>
+      <form class="admin-form" id="admin-form">
+        <label class="form-field">
+          <span>Username</span>
+          <input type="text" name="username" autocomplete="off" required />
+        </label>
+        <label class="form-field">
+          <span>Password</span>
+          <input type="password" name="password" required />
+        </label>
+        <button class="primary" type="submit">Unlock dashboard</button>
+      </form>
+      <p class="status-message" id="status-message" role="status" aria-live="polite"></p>
+      <a class="ghost" href="index.html">Back to site</a>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('admin-form');
+    const statusMessage = document.getElementById('status-message');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const username = formData.get('username');
+      const password = formData.get('password');
+
+      if (username === 'Aditya' && password === 'Aditya&2014242022') {
+        statusMessage.textContent = 'Access granted. Welcome, Aditya!';
+        statusMessage.classList.add('success');
+        statusMessage.classList.remove('error');
+      } else {
+        statusMessage.textContent = 'Access denied. Please check your credentials.';
+        statusMessage.classList.add('error');
+        statusMessage.classList.remove('success');
+      }
+    });
+  </script>
+</body>
+</html>

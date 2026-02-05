@@ -2,33 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Pro Group – Next Software</title>
-
-  <!-- Mobile + PC support -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Style -->
+  <title>Pro Group — Next Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo">Pro Group</div>
+      <div class="nav-links">
+        <a href="#platform">Platform</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#stories">Stories</a>
+      </div>
+      <div class="nav-actions">
+        <a class="ghost" href="store.html">Marketplace</a>
+        <a class="primary" href="#cta">Get started</a>
+      </div>
+    </nav>
+  </header>
 
-  <!-- Overlay Content -->
-  <div class="overlay">
-    <h1>PRO GROUP</h1>
-    <p>Next Generation Software Marketplace</p>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Next generation software marketplace</span>
+        <h1>Launch, license, and scale cloud tools your team loves.</h1>
+        <p>
+          Pro Group connects founders, enterprises, and creators with ready-to-use
+          solutions, expert support, and flexible licensing—everything in one
+          modern workspace.
+        </p>
+        <div class="hero-actions">
+          <a class="primary" href="#cta">Start free trial</a>
+          <a class="secondary" href="store.html">Browse catalog</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <strong>1.2k+</strong>
+            <span>Curated tools</span>
+          </div>
+          <div>
+            <strong>98%</strong>
+            <span>CSAT score</span>
+          </div>
+          <div>
+            <strong>45M</strong>
+            <span>Automations/month</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-header">
+          <span>Pro Group Pulse</span>
+          <span class="chip">Live</span>
+        </div>
+        <h3>Unified control center</h3>
+        <p>Track licenses, automate renewals, and deploy updates in minutes.</p>
+        <ul>
+          <li>Automated compliance checks</li>
+          <li>Team onboarding in 2 clicks</li>
+          <li>Real-time cost optimization</li>
+        </ul>
+        <button class="primary">Connect workspace</button>
+      </div>
+    </section>
 
-    <a href="store.html" class="btn">
-      Enter Store
-    </a>
-  </div>
+    <section id="platform" class="platform">
+      <div class="section-title">
+        <h2>Everything you need to run modern software</h2>
+        <p>From discovery to deployment, move faster with a platform designed for scale.</p>
+      </div>
+      <div class="platform-grid">
+        <article>
+          <h3>Discover</h3>
+          <p>AI-powered matching surfaces the tools that fit your security, stack, and budget.</p>
+        </article>
+        <article>
+          <h3>Deploy</h3>
+          <p>Instant provisioning, SSO support, and global edge delivery for every tool.</p>
+        </article>
+        <article>
+          <h3>Optimize</h3>
+          <p>Monitor usage, control spend, and renew licenses with predictive insights.</p>
+        </article>
+      </div>
+    </section>
 
-  <!-- 3D Canvas -->
-  <canvas id="bg"></canvas>
+    <section id="solutions" class="solutions">
+      <div class="section-title">
+        <h2>Built for every team</h2>
+        <p>Composable solutions that flex with your business and scale alongside you.</p>
+      </div>
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <span class="tag">Product</span>
+          <h3>Launch-ready stacks</h3>
+          <p>Bundle analytics, auth, and messaging into a single deployable workspace.</p>
+        </div>
+        <div class="solution-card">
+          <span class="tag">Ops</span>
+          <h3>Compliance-first licensing</h3>
+          <p>Meet SOC 2 and ISO standards with automated vendor risk assessments.</p>
+        </div>
+        <div class="solution-card">
+          <span class="tag">Growth</span>
+          <h3>Revenue automation</h3>
+          <p>Upsell workflows and marketplace campaigns tailored to your audience.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Three.js -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.155/build/three.min.js"></script>
+    <section id="pricing" class="pricing">
+      <div class="section-title">
+        <h2>Pricing that scales with you</h2>
+        <p>Start free, then unlock automation and analytics when you grow.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Starter</h3>
+          <p class="price">$0<span>/month</span></p>
+          <ul>
+            <li>Up to 3 workspaces</li>
+            <li>Standard support</li>
+            <li>Basic analytics</li>
+          </ul>
+          <button class="secondary">Get started</button>
+        </div>
+        <div class="price-card featured">
+          <h3>Growth</h3>
+          <p class="price">$79<span>/month</span></p>
+          <ul>
+            <li>Unlimited workspaces</li>
+            <li>Automated compliance</li>
+            <li>Priority chat support</li>
+          </ul>
+          <button class="primary">Start trial</button>
+        </div>
+        <div class="price-card">
+          <h3>Enterprise</h3>
+          <p class="price">Custom</p>
+          <ul>
+            <li>Dedicated success team</li>
+            <li>Advanced security</li>
+            <li>Custom integrations</li>
+          </ul>
+          <button class="secondary">Talk to sales</button>
+        </div>
+      </div>
+    </section>
 
-  <!-- Main 3D Script -->
-  <script src="main.js"></script>
+    <section id="stories" class="stories">
+      <div class="section-title">
+        <h2>Trusted by ambitious teams</h2>
+        <p>See how teams across industries use Pro Group to launch faster.</p>
+      </div>
+      <div class="story-grid">
+        <article>
+          <h3>Northwind Labs</h3>
+          <p>“We reduced vendor onboarding time from 3 weeks to 2 days.”</p>
+          <span>— Dana Kim, CTO</span>
+        </article>
+        <article>
+          <h3>Skyline Retail</h3>
+          <p>“The automation suite saved us 120 hours per quarter.”</p>
+          <span>— Amir Patel, Ops Lead</span>
+        </article>
+        <article>
+          <h3>Atlas Health</h3>
+          <p>“Pro Group keeps us audit-ready without slowing down teams.”</p>
+          <span>— Sofia Gomez, Compliance</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="cta" class="cta">
+      <div>
+        <h2>Ready to modernize your software stack?</h2>
+        <p>Join thousands of teams running on Pro Group. Launch in minutes.</p>
+      </div>
+      <div class="cta-actions">
+        <button class="primary">Create workspace</button>
+        <button class="secondary">Book a demo</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Pro Group</strong>
+      <p>Next Software for teams that move fast.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#platform">Platform</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#pricing">Pricing</a>
+      <a href="store.html">Marketplace</a>
+    </div>
+    <p class="footer-note">© 2024 Pro Group. All rights reserved.</p>
+  </footer>
 </body>
 </html>
