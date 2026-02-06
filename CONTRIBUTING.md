@@ -1,14 +1,15 @@
 ## 🤝 Contributors
 
-Thanks to the following people for contributing to this project:
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ProGroupco.png" width="80"/><br/>
+      <b>@ProGroupco</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/ProGroup-softwares.png" width="80"/><br/>
+      <b>@ProGroup-softwares</b>
+    </td>
+  </tr>
+</table>
 
-- **@ProGroupco** — Bug fixes & feature improvements  
-  https://github.com/ProGroupco
-
-This project is maintained by ProGroup-co with help from
-[@ProGroupco](https://github.com/ProGroupco).
-<img src="https://github.com/ProGroupco.png" width="80" alt="ProGroupco" />
-
-[@ProGroup-softwares](https://github.com/ProGroup-softwares)
-<img
-  src="https://https://github.com/ProGroup-softwares.png" width="80" alt="ProGroupco" />
