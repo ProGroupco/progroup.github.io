@@ -878,3 +878,9 @@ This project is built and maintained by the **ProGroup team**, powered by the op
     </td>
   </tr>
 </table>
+## 🤝 Credits
+
+This project is powered by ProGroup and the open-source ecosystem.
+
+👉 **View full credits here:**  
+📄 [CREDITS.md](CREDITS.md)
