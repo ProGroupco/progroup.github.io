@@ -1,0 +1,25 @@
+-- Table for Login System
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    username TEXT,
+    password_hash TEXT,
+    cloud_storage_used INTEGER
+);
+
+-- Table for Pro I Store
+CREATE TABLE pro_i_store (
+    app_id INTEGER PRIMARY KEY,
+    app_name TEXT,
+    file_type TEXT, -- .oaf
+    developer TEXT
+);
+
+-- Insert a test user
+INSERT INTO users (username, password_hash, cloud_storage_used) 
+VALUES ('OriUser', '1234', 0);
+
+-- Insert a test app
+INSERT INTO pro_i_store (app_name, file_type, developer) 
+VALUES ('Calculator', '.oaf', 'BroGang_Dev');
+
+.exit
