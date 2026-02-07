@@ -29,3 +29,5 @@ echo "🗄️ Installing SQLite (The Cloud Database)..."
 pkg install sqlite -y
 echo "☕ Installing Java (The Enterprise Engine)..."
 pkg install openjdk-17 -y
+echo "💎 Installing Ruby (The Automation Specialist)..."
+pkg install ruby -y
