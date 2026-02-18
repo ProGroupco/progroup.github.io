@@ -88,6 +88,9 @@ Maintainers may request revisions before merging.
   <a href="https://github.com/mirayatech123">
     <img src="https://github.com/mirayatech123.png" width="50" />
   </a>
+<a  href="https://github.com/mirayatech">
+    <img src="https://github.com/mirayatech.png" width="50" />
+  </a>
 </p>
 
 ---
